@@ -1,0 +1,96 @@
+{
+  "initialMessages": [],
+
+  "AiReplyList": [
+    "## 你好呀！😊\n\n随时都在，**想聊什么尽管说**。可以尝试：\n\n- 给我写一个抖音热门视频脚本\n- 让我解释一段代码\n- 介绍一下你自己",
+
+    "## 自我介绍\n\n我是一个可以读代码、写文字的 AI 助手。你可以这样使用我：\n\n### 我能做什么\n1. **编程相关**：给我解释一下冒泡排序\n2. **内容创作**：给我生成一个抖音热门视频拍摄脚本\n3. **注意事项**：除了我提到的内容我可能暂时无法理解你说的其他内容哦\n\n> 想不到要聊什么？试试问我“向我介绍你喜欢的歌手或乐队”",
+
+    "## 冒泡排序解释\n\n冒泡排序（Bubble Sort）通过不断比较相邻元素，把较大的数慢慢“冒泡”到末尾。\n\n### 算法描述\n- 从头到尾比较相邻元素\n- 如果前者更大就交换它们\n- 每一轮结束后，当前最大的元素被放到末尾\n- 重复上述步骤直到整体有序\n\n### 伪代码\n```c\n#include <stdio.h>\n\nvoid bubbleSort(int arr[], int n) {\n  for (int i = 0; i < n - 1; i++) {\n    for (int j = 0; j < n - 1 - i; j++) {\n      if (arr[j] > arr[j + 1]) {\n        int temp = arr[j];\n        arr[j] = arr[j + 1];\n        arr[j + 1] = temp;\n      }\n    }\n  }\n}\n\nint main() {\n  int arr[] = {64, 34, 25, 12, 22, 11, 90};\n  int n = sizeof(arr) / sizeof(arr[0]);\n\n  bubbleSort(arr, n);\n\n  for (int i = 0; i < n; i++) {\n    printf(\"%d \", arr[i]);\n  }\n  return 0;\n}\n```\n\n运行结果：`11 12 22 25 34 64 90`",
+
+    "## 重庆市 · 今日天气\n\n- **当前**：晴朗，约 16°C（62°F）\n- **晚间**：逐渐转多云，下降至 12–14°C\n- **建议**：带件薄外套，傍晚会偏凉\n\n> Tip：如果想让我关注其他城市，直接告诉我地点即可。",
+
+    "## 抖音热门视频拍摄脚本（通用爆款结构）\n\n🎵 **视频风格**：轻松、有反差、节奏快（8–15 秒）\n\n🎯 **适用场景**：知识、情感、搞笑、开箱、生活、转场、产品、校园、职场\n\n---\n\n### 🌟 脚本示例：《普通人也能做到的反差时刻》\n\n#### 🎞 Shot 1 — “铺垫” （约 1.5 秒）\n- 画面：主角疲惫地坐在桌前，叹气。\n- 字幕：`最近好累，什么都做不好…`\n- 音效：轻叹 + 情绪低落背景音\n- 亮点：真实、有共鸣感。\n\n#### 🎞 Shot 2 — “反差切换” （约 0.5 秒）\n- 画面：主角伸手遮住镜头（准备做转场）。\n- 字幕：`但是…`\n- 音效：\"啪！\" 或音乐节奏突然变强。\n\n#### 🎞 Shot 3 — “反转出现” （约 2 秒）\n- 画面：手移开镜头 → 主角瞬间精神焕发：\n  - 换了衣服\n  - 头发整齐\n  - 表情自信\n  - 背景更明亮\n- 字幕：`我决定从今天开始做点改变！`\n- 亮点：前后反差强烈，视觉很抓人。\n\n#### 🎞 Shot 4 — “亮点呈现” （约 4 秒）\n根据你的视频主题展示关键画面：\n- 如果是 **学习**：清晰笔记、键盘敲击、电脑屏幕特写\n- 如果是 **健身**：做一个代表性的动作\n- 如果是 **情感文案**：夕阳、城市夜景、窗边剪影\n- 如果是 **产品**：近景展示产品亮点两三秒\n- 如果是 **生活 vlog**：快速展示“前 → 后”的变化\n\n字幕示例：`其实只要迈出第一步，一切都开始变好了。`\n\n#### 🎞 Shot 5 — “总结 + CTA” （约 2 秒）\n- 画面：主角对镜头轻轻一笑。\n- 字幕：`别急，你也会变好的。`\n- 备注：结尾语气温柔、有同理心，不要太商业。\n- 音效：轻快音乐渐弱收尾。\n\n---\n\n### 🌈 视频整体节奏技巧\n- 时长控制在 **8–15 秒** 最佳；\n- 字幕要 **简短 + 大字**，方便在手机上阅读；\n- 开头必须有 **情绪钩子**（丧、困惑、焦虑、好奇等）；\n- 中段给出 **视觉反差**（状态/环境/气氛的变化）；\n- 结尾输出 **情绪价值或启发**，让人愿意点赞、收藏或转发。\n\n---\n\n###"
+  ],
+
+  "Cards": [
+    {
+      "id": "card1",
+      "type": "card",
+      "name": "陶喆",
+      "img": "./mock/DT.jpeg",
+      "description": "华语流行乐男歌手,词曲作者,音乐制作人",
+      "links": [
+        {
+          "label": "个人介绍",
+          "url": "https://baike.baidu.com/link?url=t5au6P4ZFYo_k9ZjyOkmSXqzaciBJ-iuzXb7Vyv9RusgYksYpbOiYIkAdURIDnYVj9-DYbkQEVFNAzVxQMMVnK"
+        },
+        {
+          "label": "早年经历",
+          "url": "https://baike.baidu.com/link?url=qkuE5_PzUwKX2dY2FlhID-oOAQIgrFOEnvdFEE3gdpH92CjvsDss0qycKf896AtEuf71SwrsHHnmD4HFqm_1V_#1"
+        },
+        {
+          "label": "主要作品",
+          "url": "https://baike.baidu.com/link?url=YKcSCxdF_2p0fQZC3vlsC_DTMXmAyeINdH-MuZ3kGVA7mm0pcR716FvkvnZx9VuGHYpZtbkolib1zX3XZXlSxq#4"
+        },
+        {
+          "label": "获奖经历",
+          "url": "https://baike.baidu.com/link?url=YKcSCxdF_2p0fQZC3vlsC_DTMXmAyeINdH-MuZ3kGVA7mm0pcR716FvkvnZx9VuGHYpZtbkolib1zX3XZXlSxq#6"
+        }
+      ]
+    },
+
+    {
+      "id": "card2",
+      "type": "card",
+      "name": "甲壳虫乐队(披头士)",
+      "img": "./mock/Beatles.webp",
+      "description": "The Beatles，英国摇滚乐队，1960年成立于英国利物浦，由约翰·列侬、林戈·斯塔尔、保罗·麦卡特尼和乔治·哈里森四名成员组成。",
+      "links": [
+        {
+          "label": "个人介绍",
+          "url": "https://baike.baidu.com/item/The%20Beatles/67366?fromtitle=%E7%94%B2%E5%A3%B3%E8%99%AB%E4%B9%90%E9%98%9F&fromid=480384&fr=aladdin"
+        },
+        {
+          "label": "演艺经历",
+          "url": "https://baike.baidu.com/item/The%20Beatles/67366?fromtitle=%E7%94%B2%E5%A3%B3%E8%99%AB%E4%B9%90%E9%98%9F&fromid=480384&fr=aladdin#2"
+        },
+        {
+          "label": "主要作品",
+          "url": "https://baike.baidu.com/item/The%20Beatles/67366?fromtitle=%E7%94%B2%E5%A3%B3%E8%99%AB%E4%B9%90%E9%98%9F&fromid=480384&fr=aladdin#4"
+        },
+        {
+          "label": "获奖经历",
+          "url": "https://baike.baidu.com/item/The%20Beatles/67366?fromtitle=%E7%94%B2%E5%A3%B3%E8%99%AB%E4%B9%90%E9%98%9F&fromid=480384&fr=aladdin#5"
+        }
+      ]
+    },
+
+    {
+      "id": "card3",
+      "type": "card",
+      "name": "王菲",
+      "img": "./mock/faye.jpg",
+      "description": "王菲（Faye Wong），1969年8月8日出生于北京市，华语流行乐女歌手、词曲作者、影视演员，一级演员。",
+      "links": [
+        {
+          "label": "个人介绍",
+          "url": "https://baike.baidu.com/link?url=xBlEO5E7saznFKlZxhK05xD3UkHLsVwvcA2FzXf2oiKHrK3C3kySAjwIcoVkC-oK1zMgdkRjL4Zvyl77VG2w7q"
+        },
+        {
+          "label": "早年经历",
+          "url": "https://baike.baidu.com/link?url=WDJ4kNr1DX42SfxllQPeKt11F2Ki7OtrV66etscOE2fCRghA4DZplTH_ISpd-QCFWT7XTahw6IpC1xzGsQfg4a#1"
+        },
+        {
+          "label": "主要作品",
+          "url": "https://baike.baidu.com/link?url=xBlEO5E7saznFKlZxhK05xD3UkHLsVwvcA2FzXf2oiKHrK3C3kySAjwIcoVkC-oK1zMgdkRjL4Zvyl77VG2w7q#4"
+        },
+        {
+          "label": "获奖经历",
+          "url": "https://baike.baidu.com/link?url=xBlEO5E7saznFKlZxhK05xD3UkHLsVwvcA2FzXf2oiKHrK3C3kySAjwIcoVkC-oK1zMgdkRjL4Zvyl77VG2w7q#7"
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,500 @@
+#root {
+  /* max-width: 1280px;
+  margin: 0 auto; */
+  /* padding: 2rem; */
+  flex: 1;
+  display: flex;
+  /* text-align: center; */
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* 侧边栏容器：根据 class 控制宽度与动画 */
+.sider-container {
+  transition: width 0.3s ease;
+  overflow: hidden;
+  display: flex;
+}
+
+.sider-container.opened {
+  width: 250px;
+}
+
+.sider-container.closed {
+  width: 60px;
+}
+
+.sider-opened,
+.sider-closed {
+  display: flex;
+  flex-direction: column;
+  background-color: #181818;
+  height: 100vh;
+}
+
+.sider-opened {
+  width: 100%;
+  overflow-y: auto;
+}
+
+.sider-opened p {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin: 0;
+}
+
+.sider-opened .close {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background-color: #181818;
+}
+
+.sider-opened .new-chat {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background-color: #181818;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.sider-opened .new-chat .iconfont,
+.sider-closed .new-chat .iconfont {
+  font-size: 22px;
+}
+
+.sider-opened button,
+.sider-closed button {
+  margin: 0 5px;
+}
+
+/* 侧边栏关闭状态 */
+.sider-container.closed {
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid #8888882d;
+}
+
+.sider-closed {
+  background-color: #242424;
+}
+
+.sider-closed .close {
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-left: 8px;
+  background-color: #242424;
+}
+
+.sider-closed .new-chat {
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin-left: 9px;
+  background-color: #242424;
+}
+
+.sider-closed .new-chat span {
+  display: none;
+}
+
+.sider-closed .session-list {
+  display: none;
+}
+
+
+.sider-opened button:hover,
+.sider-closed button:hover {
+  border-radius: 12px;
+  background-color: #cccccc41;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.sider-opened button:active,
+.sider-closed button:active {
+  background-color: #cccccc41;
+}
+
+.sider p .iconfont {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+/* 侧边栏对话列表 */
+.session-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0 8px 8px;
+}
+
+.session-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  margin-bottom: 4px;
+  border-radius: 8px;
+  color: #e5e5e5;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.session-item:hover {
+  background-color: #333333;
+}
+
+.session-item.active {
+  background-color: #3a3a3a;
+}
+
+.session-title {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.session-delete-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.session-item:hover .session-delete-btn {
+  color: #fff;
+}
+
+/* 右侧部分 */
+.right {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100vh;
+  position: relative;
+}
+
+/* 顶部 */
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #242424;
+  border-bottom: 1px solid #8888882d;
+  line-height: 60px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.header .iconfont {
+  font-size: 20px;
+  color: #fff;
+  margin-right: 5px;
+  margin-left: 20px;
+}
+
+/* 底部 */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #242424;
+  line-height: 40px;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* 对话框 */
+.right .chatbox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 28px;
+  padding: 2px 8px 2px 8px;
+  margin: 0 auto;
+  line-height: 1.5;
+  box-sizing: border-box;
+  background-color: #cccccc41;
+  text-align: left;
+  word-break: break-word;
+}
+
+.right .chatbox textarea {
+  flex: 1;
+  min-height: 50px;
+  padding-right: 50px;
+  height: auto;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  line-height: 1.5;
+  outline: none;
+  resize: none;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.right .chatbox textarea::placeholder {
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.right .chatbox button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+
+.right .chatbox button .iconfont {
+  margin-left: 2px;
+  color: black;
+  font-size: 20px;
+}
+
+
+/* 对话框固定定位 */
+.right .chatbox-fixed {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 28px;
+  padding: 2px 8px 2px 8px;
+  margin: 0 auto;
+  line-height: 1.5;
+  box-sizing: border-box;
+  background-color: #333;
+  text-align: left;
+  word-break: break-word;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+  z-index: 10;
+}
+
+.right .chatbox-fixed textarea {
+  flex: 1;
+  min-height: 50px;
+  padding-right: 50px;
+  height: auto;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  line-height: 1.5;
+  outline: none;
+  resize: none;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.right .chatbox-fixed textarea::placeholder {
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.right .chatbox-fixed button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 8px;
+  bottom: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+
+.right .chatbox-fixed button .iconfont {
+  margin-left: 2px;
+  color: black;
+  font-size: 20px;
+}
+
+/* 消息列表滚动区域 */
+.chat-list-scroll-wrapper {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* 消息列表 */
+/* 消息列表区域，占满宽度、上下留一点空隙 */
+.chat-list {
+  width: 100%;
+  padding-bottom: 100px;
+  max-width: 800px;
+  margin: 16px auto;
+  box-sizing: border-box;
+}
+
+/* 每一行消息的外层容器 */
+.message-row {
+  margin-bottom: 8px;
+}
+
+/* 用户消息靠右，AI 消息靠左（以后你可以再细化样式） */
+.message-row.user {
+  text-align: right;
+}
+
+.message-row.assistant {
+  text-align: left;
+}
+
+/* 真正的气泡盒子，跟着内容变宽变高 */
+.message-bubble {
+  display: inline-block;
+  max-width: 70%;
+  margin-top: 80px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  line-height: 1.5;
+  word-break: break-word;
+  background-color: transparent;
+  color: #fff;
+  white-space: pre-wrap;
+}
+
+.copy-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 30px;
+  height: 30px;
+  margin-top: 8px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background-color: transparent;
+  color: #ccc;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+/* 用户气泡样式 */
+.message-row.user .message-bubble {
+  background-color: #323232d9;
+  color: #fff;
+}
+
+/* 思考中小圆点 */
+.message-bubble .loading-dot .iconfont{
+  display: inline-block;
+  margin-right: 5px;
+  animation: loading 1.2s infinite ease-in-out;
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+
+/* 渲染特定卡片 */
+.cards {
+  padding: 20px;
+}
+
+.cards img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.cards a {
+  color: #fff;
+}
+
+.cards .name {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 20px
+}
+
+.cards ul{
+  display: flex;
+  padding: 0;
+  width: 280px;
+  justify-content: space-between;
+}
+
+.cards li {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #333333;
+  list-style: none;
+}
